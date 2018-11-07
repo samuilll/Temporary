@@ -1,0 +1,1102 @@
+﻿2018-11-05 11:01:16,049 [136] ERROR EPiServer.Global: Unhandled exception in ASP.NET
+System.Web.HttpException (0x80004005): The file '/link/43F936C99B234EA397B261C538AD07C9.aspx' does not exist.
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.Routing.PageRouteHandler.GetHttpHandler(RequestContext requestContext)
+   at EPiServer.Web.Routing.Internal.MultiplexingRouteHandler.GetHttpHandler(RequestContext requestContext)
+   at System.Web.Routing.UrlRoutingModule.PostResolveRequestCache(HttpContextBase context)
+   at System.Web.Routing.UrlRoutingModule.OnApplicationPostResolveRequestCache(Object sender, EventArgs e)
+   at System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+System.Web.HttpException (0x80004005): The file '/link/43F936C99B234EA397B261C538AD07C9.aspx' does not exist.
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.Routing.PageRouteHandler.GetHttpHandler(RequestContext requestContext)
+   at EPiServer.Web.Routing.Internal.MultiplexingRouteHandler.GetHttpHandler(RequestContext requestContext)
+   at System.Web.Routing.UrlRoutingModule.PostResolveRequestCache(HttpContextBase context)
+   at System.Web.Routing.UrlRoutingModule.OnApplicationPostResolveRequestCache(Object sender, EventArgs e)
+   at System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-11-05 12:45:57,959 [150] ERROR EPiServer.Framework.Initialization.InitializationEngine: Initialize action failed for 'Initialize on class EPiServer.Initialization.Internal.ContentFactoryInitialization, EPiServer, Version=11.10.5.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7'
+EPiServer.ServiceLocation.ActivationException: Activation error occurred while trying to get instance of type ContentFactory, key "" ---> StructureMap.Building.StructureMapBuildException: Failure while building 'Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentModelUsage,EPiServer.Core.IContentModelUsage]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentModelUsage])._serviceLocator)', check the inner exception for details
+1.) Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentModelUsage,EPiServer.Core.IContentModelUsage]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentModelUsage])._serviceLocator)
+2.) Instance of EPiServer.Core.IContentModelUsage
+3.) new ModelMerger(*Default of IContentModelUsage*, *Default of ContentModelOptions*)
+4.) EPiServer.DataAbstraction.RuntimeModel.Internal.ModelMerger
+5.) Instance of EPiServer.DataAbstraction.RuntimeModel.Internal.ModelMerger
+6.) new DefaultPropertyDefinitionRepository(*Default of ContentTypeModelRepository*, *Default of ITabDefinitionRepository*, *Default of ServiceAccessor<PropertyDefinitionDB>*, *Default of ModelMerger*, *Default of ISynchronizedObjectInstanceCache*)
+7.) EPiServer.DataAbstraction.Internal.DefaultPropertyDefinitionRepository
+8.) Instance of EPiServer.DataAbstraction.IPropertyDefinitionRepository (EPiServer.DataAbstraction.Internal.DefaultPropertyDefinitionRepository)
+9.) new ContentTypeDB(*Default of ServiceAccessor<IDatabaseExecutor>*, *Default of IPropertyDefinitionRepository*, *Default of IPropertySettingsRepository*, *Default of ContentTypeModelRepository*, *Default of DatabaseDateTimeHandler*, *Default of ISynchronizedObjectInstanceCache*, *Default of IPrincipalAccessor*)
+10.) EPiServer.DataAccess.Internal.ContentTypeDB
+11.) Instance of EPiServer.DataAccess.Internal.ContentTypeDB
+12.) new DefaultContentTypeRepository(*Default of ContentTypeModelRepository*, *Default of ContentTypeDB*, *Default of ModelMerger*, *Default of ITabDefinitionRepository*, *Default of IPropertyDefinitionTypeRepository*, *Default of ITypeReferenceAnalyzer*, *Default of IPropertyDefinitionRepository*, *Default of ISynchronizedObjectInstanceCache*)
+13.) EPiServer.DataAbstraction.Internal.DefaultContentTypeRepository
+14.) Instance of EPiServer.DataAbstraction.IContentTypeRepository (EPiServer.DataAbstraction.Internal.DefaultContentTypeRepository)
+15.) new ContentDataBuilder(*Default of IPropertyDataFactory*, *Default of IContentTypeRepository*, *Default of IContentDataFactory<BlockData>*, *Default of ILanguageBranchRepository*, *Default of IPageDataMetadataBuilder*, *Default of IContentLanguageAccessor*, *Default of IPrincipalAccessor*)
+16.) EPiServer.Construction.Internal.ContentDataBuilder
+17.) Instance of EPiServer.Construction.IContentDataBuilder (EPiServer.Construction.Internal.ContentDataBuilder)
+18.) new SharedBlockFactory(*Default of IContentDataBuilder*, *Default of ConstructorParameterResolver*, *Default of ServiceAccessor<ContentDataInterceptor>*)
+19.) EPiServer.Construction.Internal.SharedBlockFactory
+20.) Instance of EPiServer.Construction.ISharedBlockFactory (EPiServer.Construction.Internal.SharedBlockFactory)
+21.) new ContentFactory(*Default of ISharedBlockFactory*, *Default of IContentDataFactory<IContent>*, *Default of IContentDataFactory<PageData>*, *Default of IContentDataBuilder*, *Default of IPropertyDataFactory*)
+22.) EPiServer.Construction.Internal.ContentFactory
+23.) Instance of EPiServer.Construction.Internal.ContentFactory
+24.) Container.GetInstance(EPiServer.Construction.Internal.ContentFactory)
+ ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> EPiServer.ServiceLocation.ActivationException: Activation error occurred while trying to get instance of type DefaultContentModelUsageService, key "" ---> StructureMap.Building.StructureMapBuildException: Failure while building 'Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentProviderManager,EPiServer.Core.IContentProviderManager]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentProviderManager])._serviceLocator)', check the inner exception for details
+1.) Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentProviderManager,EPiServer.Core.IContentProviderManager]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentProviderManager])._serviceLocator)
+2.) Instance of EPiServer.Core.IContentProviderManager
+3.) new DefaultContentModelUsageService(*Default of IContentProviderManager*)
+4.) EPiServer.Core.Internal.DefaultContentModelUsageService
+5.) Instance of EPiServer.Core.Internal.DefaultContentModelUsageService
+6.) Container.GetInstance(EPiServer.Core.Internal.DefaultContentModelUsageService)
+ ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> EPiServer.ServiceLocation.ActivationException: Activation error occurred while trying to get instance of type DefaultContentProviderManager, key "" ---> StructureMap.Building.StructureMapBuildException: Failure while building 'Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentLanguageAccessor,EPiServer.Core.IContentLanguageAccessor]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentLanguageAccessor])._serviceLocator)', check the inner exception for details
+1.) Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentLanguageAccessor,EPiServer.Core.IContentLanguageAccessor]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentLanguageAccessor])._serviceLocator)
+2.) Instance of EPiServer.Core.IContentLanguageAccessor
+3.) new DefaultContentProviderManager(*Default of IContentLanguageAccessor*)
+4.) EPiServer.Core.Internal.DefaultContentProviderManager
+5.) Instance of EPiServer.Core.Internal.DefaultContentProviderManager
+6.) Container.GetInstance(EPiServer.Core.Internal.DefaultContentProviderManager)
+ ---> EPiServer.ServiceLocation.ActivationException: Activation error occurred while trying to get instance of type ContentLanguageImplementation, key "" ---> StructureMap.Building.StructureMapBuildException: Failure while building 'Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Framework.Localization.LocalizationService,EPiServer.Framework.Localization.LocalizationService]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Framework.Localization.LocalizationService])._serviceLocator)', check the inner exception for details
+1.) Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Framework.Localization.LocalizationService,EPiServer.Framework.Localization.LocalizationService]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Framework.Localization.LocalizationService])._serviceLocator)
+2.) Instance of EPiServer.Framework.Localization.LocalizationService
+3.) new LanguageBranchRepository(*Default of LanguageBranchDB*, *Default of LocalizationService*, *Default of ISynchronizedObjectInstanceCache*)
+4.) EPiServer.DataAbstraction.Internal.LanguageBranchRepository
+5.) Instance of EPiServer.DataAbstraction.ILanguageBranchRepository (EPiServer.DataAbstraction.Internal.LanguageBranchRepository)
+6.) new ContentLanguageImplementation(*Default of ILanguageBranchRepository*, *Default of HostLanguageResolver*, *Default of ServiceAccessor<HttpRequestBase>*, *Default of ContextCache*)
+7.) EPiServer.Globalization.Internal.ContentLanguageImplementation
+8.) Instance of EPiServer.Globalization.Internal.ContentLanguageImplementation
+9.) Container.GetInstance(EPiServer.Globalization.Internal.ContentLanguageImplementation)
+ ---> EPiServer.ServiceLocation.ActivationException: Activation error occurred while trying to get instance of type LocalizationOptions, key "" ---> StructureMap.Building.StructureMapInterceptorException: Decorator Interceptor failed during object construction.  See the inner exception
+1.) FuncInterceptor of EPiServer.Framework.Localization.LocalizationOptions: Invoke(value(StructureMap.Building.Interception.InterceptorFactory+<>c__DisplayClass2_0`1[EPiServer.Framework.Localization.LocalizationOptions]).func, LocalizationOptions)
+2.) EPiServer.Framework.Localization.LocalizationOptions
+3.) Instance of EPiServer.Framework.Localization.LocalizationOptions
+4.) Container.GetInstance(EPiServer.Framework.Localization.LocalizationOptions)
+ ---> System.Configuration.ConfigurationErrorsException: Provider type 'EPiServer.Framework.Localization.XmlResources
+ .FileXmlLocalizationProvider, EPiServer.Framework.AspNet' could not be loaded. (C:\Users\Stella\Desktop\OnboardingProgram\EpiserverProjects\Training\AlloyTraining\web.config line 253)
+   at EPiServer.Configuration.Transform.Internal.ProviderSettingsValidator.Validate[TProviderContract](ProviderSettings settings, Type& providerType)
+   at EPiServer.Configuration.Transform.Internal.LocalizationOptionsTransform.Transform(LocalizationOptions options, EPiServerFrameworkSection section)
+   at EPiServer.Configuration.Transform.Internal.LocalizationOptionsTransform.Transform(LocalizationOptions options)
+   at EPiServer.ServiceLocation.ServiceConfigurationProviderExtensions.<>c__DisplayClass33_0`1.<Configure>b__0(IServiceLocator l, TService s)
+   at EPiServer.ServiceLocation.Internal.StructureMapConfiguration.<>c__DisplayClass19_0`1.<Intercept>b__9(T service)
+   at lambda_method(Closure , IBuildSession , IContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , IBuildSession , IContext )
+   at StructureMap.Building.BuildPlan.Build(IBuildSession session, IContext context)
+   at StructureMap.BuildSession.BuildNewInSession(Type pluginType, Instance instance)
+   at StructureMap.BuildSession.BuildNewInOriginalContext(Type pluginType, Instance instance)
+   at StructureMap.Pipeline.LifecycleObjectCache.buildWithSession(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.Pipeline.LifecycleObjectCache.<>c__DisplayClass5_0.<Get>b__0(Int32 _)
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.<>c__DisplayClass1_1`2.<GetOrAdd>b__1()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.CreateValue()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.get_Value()
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.GetOrAdd[TKey,TValue](ConcurrentDictionary`2 cache, TKey key, Func`2 valueFactory)
+   at StructureMap.Pipeline.LifecycleObjectCache.Get(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.BuildSession.ResolveFromLifecycle(Type pluginType, Instance instance)
+   at StructureMap.SessionCache.GetObject(Type pluginType, Instance instance, ILifecycle lifecycle)
+   at StructureMap.SessionCache.GetDefault(Type pluginType, IPipelineGraph pipelineGraph)
+   at StructureMap.Container.GetInstance(Type pluginType)
+   at EPiServer.ServiceLocation.StructureMapServiceLocator.DoGetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   --- End of inner exception stack trace ---
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType)
+   at EPiServer.ServiceLocation.Internal.ReflectiveServiceConfigurationHelper.<>c__DisplayClass0_2.<TryRegisterServiceFactoryMember>b__4(ParameterInfo p)
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at EPiServer.ServiceLocation.Internal.ReflectiveServiceConfigurationHelper.<>c__DisplayClass0_0.<TryRegisterServiceFactoryMember>b__2(IServiceLocator c)
+   at EPiServer.ServiceLocation.Internal.StructureMapConfiguration.TypedFactory`1.<Create>b__2_0(IServiceLocator s)
+   at lambda_method(Closure , IBuildSession , IContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , IBuildSession , IContext )
+   at StructureMap.Building.BuildPlan.Build(IBuildSession session, IContext context)
+   at StructureMap.BuildSession.BuildNewInSession(Type pluginType, Instance instance)
+   at StructureMap.BuildSession.BuildNewInOriginalContext(Type pluginType, Instance instance)
+   at StructureMap.Pipeline.LifecycleObjectCache.buildWithSession(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.Pipeline.LifecycleObjectCache.<>c__DisplayClass5_0.<Get>b__0(Int32 _)
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.<>c__DisplayClass1_1`2.<GetOrAdd>b__1()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.CreateValue()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.get_Value()
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.GetOrAdd[TKey,TValue](ConcurrentDictionary`2 cache, TKey key, Func`2 valueFactory)
+   at StructureMap.Pipeline.LifecycleObjectCache.Get(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.BuildSession.ResolveFromLifecycle(Type pluginType, Instance instance)
+   at StructureMap.SessionCache.GetObject(Type pluginType, Instance instance, ILifecycle lifecycle)
+   at StructureMap.SessionCache.GetDefault(Type pluginType, IPipelineGraph pipelineGraph)
+   at StructureMap.Container.GetInstance(Type pluginType)
+   at EPiServer.ServiceLocation.StructureMapServiceLocator.DoGetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   --- End of inner exception stack trace ---
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance[TService]()
+   at EPiServer.ServiceLocation.ServiceConfigurationProviderExtensions.<>c__34`2.<Forward>b__34_0(IServiceLocator s)
+   at EPiServer.ServiceLocation.Internal.StructureMapConfiguration.TypedFactory`1.<Create>b__2_0(IServiceLocator s)
+   at lambda_method(Closure , IBuildSession , IContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , IBuildSession , IContext )
+   at StructureMap.Building.BuildPlan.Build(IBuildSession session, IContext context)
+   at StructureMap.BuildSession.BuildNewInSession(Type pluginType, Instance instance)
+   at StructureMap.BuildSession.BuildNewInOriginalContext(Type pluginType, Instance instance)
+   at StructureMap.Pipeline.LifecycleObjectCache.buildWithSession(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.Pipeline.LifecycleObjectCache.<>c__DisplayClass5_0.<Get>b__0(Int32 _)
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.<>c__DisplayClass1_1`2.<GetOrAdd>b__1()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.CreateValue()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.get_Value()
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.GetOrAdd[TKey,TValue](ConcurrentDictionary`2 cache, TKey key, Func`2 valueFactory)
+   at StructureMap.Pipeline.LifecycleObjectCache.Get(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.BuildSession.ResolveFromLifecycle(Type pluginType, Instance instance)
+   at StructureMap.SessionCache.GetObject(Type pluginType, Instance instance, ILifecycle lifecycle)
+   at StructureMap.SessionCache.GetDefault(Type pluginType, IPipelineGraph pipelineGraph)
+   at StructureMap.Container.GetInstance(Type pluginType)
+   at EPiServer.ServiceLocation.StructureMapServiceLocator.DoGetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   --- End of inner exception stack trace ---
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance[TService]()
+   at EPiServer.Core.Internal.DefaultContentProviderManager.get_Instance()
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at EPiServer.ServiceLocation.Internal.ReflectiveServiceConfigurationHelper.<>c__DisplayClass0_1.<TryRegisterServiceFactoryMember>b__3(IServiceLocator c)
+   at EPiServer.ServiceLocation.Internal.StructureMapConfiguration.TypedFactory`1.<Create>b__2_0(IServiceLocator s)
+   at lambda_method(Closure , IBuildSession , IContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , IBuildSession , IContext )
+   at StructureMap.Building.BuildPlan.Build(IBuildSession session, IContext context)
+   at StructureMap.BuildSession.BuildNewInSession(Type pluginType, Instance instance)
+   at StructureMap.BuildSession.BuildNewInOriginalContext(Type pluginType, Instance instance)
+   at StructureMap.Pipeline.LifecycleObjectCache.buildWithSession(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.Pipeline.LifecycleObjectCache.<>c__DisplayClass5_0.<Get>b__0(Int32 _)
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.<>c__DisplayClass1_1`2.<GetOrAdd>b__1()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.CreateValue()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.get_Value()
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.GetOrAdd[TKey,TValue](ConcurrentDictionary`2 cache, TKey key, Func`2 valueFactory)
+   at StructureMap.Pipeline.LifecycleObjectCache.Get(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.BuildSession.ResolveFromLifecycle(Type pluginType, Instance instance)
+   at StructureMap.SessionCache.GetObject(Type pluginType, Instance instance, ILifecycle lifecycle)
+   at StructureMap.SessionCache.GetDefault(Type pluginType, IPipelineGraph pipelineGraph)
+   at StructureMap.Container.GetInstance(Type pluginType)
+   at EPiServer.ServiceLocation.StructureMapServiceLocator.DoGetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   --- End of inner exception stack trace ---
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance[TService]()
+   at EPiServer.Core.Internal.DefaultContentModelUsageService.get_Instance()
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at EPiServer.ServiceLocation.Internal.ReflectiveServiceConfigurationHelper.<>c__DisplayClass0_1.<TryRegisterServiceFactoryMember>b__3(IServiceLocator c)
+   at EPiServer.ServiceLocation.Internal.StructureMapConfiguration.TypedFactory`1.<Create>b__2_0(IServiceLocator s)
+   at lambda_method(Closure , IBuildSession , IContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , IBuildSession , IContext )
+   at StructureMap.Building.BuildPlan.Build(IBuildSession session, IContext context)
+   at StructureMap.BuildSession.BuildNewInSession(Type pluginType, Instance instance)
+   at StructureMap.BuildSession.BuildNewInOriginalContext(Type pluginType, Instance instance)
+   at StructureMap.Pipeline.LifecycleObjectCache.buildWithSession(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.Pipeline.LifecycleObjectCache.<>c__DisplayClass5_0.<Get>b__0(Int32 _)
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.<>c__DisplayClass1_1`2.<GetOrAdd>b__1()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.CreateValue()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.get_Value()
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.GetOrAdd[TKey,TValue](ConcurrentDictionary`2 cache, TKey key, Func`2 valueFactory)
+   at StructureMap.Pipeline.LifecycleObjectCache.Get(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.BuildSession.ResolveFromLifecycle(Type pluginType, Instance instance)
+   at StructureMap.SessionCache.GetObject(Type pluginType, Instance instance, ILifecycle lifecycle)
+   at StructureMap.SessionCache.GetDefault(Type pluginType, IPipelineGraph pipelineGraph)
+   at StructureMap.Container.GetInstance(Type pluginType)
+   at EPiServer.ServiceLocation.StructureMapServiceLocator.DoGetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   --- End of inner exception stack trace ---
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance[TService]()
+   at EPiServer.Initialization.Internal.ContentFactoryInitialization.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.<>c__DisplayClass2_0.<Initialize>b__0()
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Execute(Action a, String key)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()
+EPiServer.ServiceLocation.ActivationException: Activation error occurred while trying to get instance of type ContentFactory, key "" ---> StructureMap.Building.StructureMapBuildException: Failure while building 'Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentModelUsage,EPiServer.Core.IContentModelUsage]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentModelUsage])._serviceLocator)', check the inner exception for details
+1.) Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentModelUsage,EPiServer.Core.IContentModelUsage]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentModelUsage])._serviceLocator)
+2.) Instance of EPiServer.Core.IContentModelUsage
+3.) new ModelMerger(*Default of IContentModelUsage*, *Default of ContentModelOptions*)
+4.) EPiServer.DataAbstraction.RuntimeModel.Internal.ModelMerger
+5.) Instance of EPiServer.DataAbstraction.RuntimeModel.Internal.ModelMerger
+6.) new DefaultPropertyDefinitionRepository(*Default of ContentTypeModelRepository*, *Default of ITabDefinitionRepository*, *Default of ServiceAccessor<PropertyDefinitionDB>*, *Default of ModelMerger*, *Default of ISynchronizedObjectInstanceCache*)
+7.) EPiServer.DataAbstraction.Internal.DefaultPropertyDefinitionRepository
+8.) Instance of EPiServer.DataAbstraction.IPropertyDefinitionRepository (EPiServer.DataAbstraction.Internal.DefaultPropertyDefinitionRepository)
+9.) new ContentTypeDB(*Default of ServiceAccessor<IDatabaseExecutor>*, *Default of IPropertyDefinitionRepository*, *Default of IPropertySettingsRepository*, *Default of ContentTypeModelRepository*, *Default of DatabaseDateTimeHandler*, *Default of ISynchronizedObjectInstanceCache*, *Default of IPrincipalAccessor*)
+10.) EPiServer.DataAccess.Internal.ContentTypeDB
+11.) Instance of EPiServer.DataAccess.Internal.ContentTypeDB
+12.) new DefaultContentTypeRepository(*Default of ContentTypeModelRepository*, *Default of ContentTypeDB*, *Default of ModelMerger*, *Default of ITabDefinitionRepository*, *Default of IPropertyDefinitionTypeRepository*, *Default of ITypeReferenceAnalyzer*, *Default of IPropertyDefinitionRepository*, *Default of ISynchronizedObjectInstanceCache*)
+13.) EPiServer.DataAbstraction.Internal.DefaultContentTypeRepository
+14.) Instance of EPiServer.DataAbstraction.IContentTypeRepository (EPiServer.DataAbstraction.Internal.DefaultContentTypeRepository)
+15.) new ContentDataBuilder(*Default of IPropertyDataFactory*, *Default of IContentTypeRepository*, *Default of IContentDataFactory<BlockData>*, *Default of ILanguageBranchRepository*, *Default of IPageDataMetadataBuilder*, *Default of IContentLanguageAccessor*, *Default of IPrincipalAccessor*)
+16.) EPiServer.Construction.Internal.ContentDataBuilder
+17.) Instance of EPiServer.Construction.IContentDataBuilder (EPiServer.Construction.Internal.ContentDataBuilder)
+18.) new SharedBlockFactory(*Default of IContentDataBuilder*, *Default of ConstructorParameterResolver*, *Default of ServiceAccessor<ContentDataInterceptor>*)
+19.) EPiServer.Construction.Internal.SharedBlockFactory
+20.) Instance of EPiServer.Construction.ISharedBlockFactory (EPiServer.Construction.Internal.SharedBlockFactory)
+21.) new ContentFactory(*Default of ISharedBlockFactory*, *Default of IContentDataFactory<IContent>*, *Default of IContentDataFactory<PageData>*, *Default of IContentDataBuilder*, *Default of IPropertyDataFactory*)
+22.) EPiServer.Construction.Internal.ContentFactory
+23.) Instance of EPiServer.Construction.Internal.ContentFactory
+24.) Container.GetInstance(EPiServer.Construction.Internal.ContentFactory)
+ ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> EPiServer.ServiceLocation.ActivationException: Activation error occurred while trying to get instance of type DefaultContentModelUsageService, key "" ---> StructureMap.Building.StructureMapBuildException: Failure while building 'Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentProviderManager,EPiServer.Core.IContentProviderManager]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentProviderManager])._serviceLocator)', check the inner exception for details
+1.) Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentProviderManager,EPiServer.Core.IContentProviderManager]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentProviderManager])._serviceLocator)
+2.) Instance of EPiServer.Core.IContentProviderManager
+3.) new DefaultContentModelUsageService(*Default of IContentProviderManager*)
+4.) EPiServer.Core.Internal.DefaultContentModelUsageService
+5.) Instance of EPiServer.Core.Internal.DefaultContentModelUsageService
+6.) Container.GetInstance(EPiServer.Core.Internal.DefaultContentModelUsageService)
+ ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> EPiServer.ServiceLocation.ActivationException: Activation error occurred while trying to get instance of type DefaultContentProviderManager, key "" ---> StructureMap.Building.StructureMapBuildException: Failure while building 'Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentLanguageAccessor,EPiServer.Core.IContentLanguageAccessor]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentLanguageAccessor])._serviceLocator)', check the inner exception for details
+1.) Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentLanguageAccessor,EPiServer.Core.IContentLanguageAccessor]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentLanguageAccessor])._serviceLocator)
+2.) Instance of EPiServer.Core.IContentLanguageAccessor
+3.) new DefaultContentProviderManager(*Default of IContentLanguageAccessor*)
+4.) EPiServer.Core.Internal.DefaultContentProviderManager
+5.) Instance of EPiServer.Core.Internal.DefaultContentProviderManager
+6.) Container.GetInstance(EPiServer.Core.Internal.DefaultContentProviderManager)
+ ---> EPiServer.ServiceLocation.ActivationException: Activation error occurred while trying to get instance of type ContentLanguageImplementation, key "" ---> StructureMap.Building.StructureMapBuildException: Failure while building 'Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Framework.Localization.LocalizationService,EPiServer.Framework.Localization.LocalizationService]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Framework.Localization.LocalizationService])._serviceLocator)', check the inner exception for details
+1.) Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Framework.Localization.LocalizationService,EPiServer.Framework.Localization.LocalizationService]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Framework.Localization.LocalizationService])._serviceLocator)
+2.) Instance of EPiServer.Framework.Localization.LocalizationService
+3.) new LanguageBranchRepository(*Default of LanguageBranchDB*, *Default of LocalizationService*, *Default of ISynchronizedObjectInstanceCache*)
+4.) EPiServer.DataAbstraction.Internal.LanguageBranchRepository
+5.) Instance of EPiServer.DataAbstraction.ILanguageBranchRepository (EPiServer.DataAbstraction.Internal.LanguageBranchRepository)
+6.) new ContentLanguageImplementation(*Default of ILanguageBranchRepository*, *Default of HostLanguageResolver*, *Default of ServiceAccessor<HttpRequestBase>*, *Default of ContextCache*)
+7.) EPiServer.Globalization.Internal.ContentLanguageImplementation
+8.) Instance of EPiServer.Globalization.Internal.ContentLanguageImplementation
+9.) Container.GetInstance(EPiServer.Globalization.Internal.ContentLanguageImplementation)
+ ---> EPiServer.ServiceLocation.ActivationException: Activation error occurred while trying to get instance of type LocalizationOptions, key "" ---> StructureMap.Building.StructureMapInterceptorException: Decorator Interceptor failed during object construction.  See the inner exception
+1.) FuncInterceptor of EPiServer.Framework.Localization.LocalizationOptions: Invoke(value(StructureMap.Building.Interception.InterceptorFactory+<>c__DisplayClass2_0`1[EPiServer.Framework.Localization.LocalizationOptions]).func, LocalizationOptions)
+2.) EPiServer.Framework.Localization.LocalizationOptions
+3.) Instance of EPiServer.Framework.Localization.LocalizationOptions
+4.) Container.GetInstance(EPiServer.Framework.Localization.LocalizationOptions)
+ ---> System.Configuration.ConfigurationErrorsException: Provider type 'EPiServer.Framework.Localization.XmlResources
+ .FileXmlLocalizationProvider, EPiServer.Framework.AspNet' could not be loaded. (C:\Users\Stella\Desktop\OnboardingProgram\EpiserverProjects\Training\AlloyTraining\web.config line 253)
+   at EPiServer.Configuration.Transform.Internal.ProviderSettingsValidator.Validate[TProviderContract](ProviderSettings settings, Type& providerType)
+   at EPiServer.Configuration.Transform.Internal.LocalizationOptionsTransform.Transform(LocalizationOptions options, EPiServerFrameworkSection section)
+   at EPiServer.Configuration.Transform.Internal.LocalizationOptionsTransform.Transform(LocalizationOptions options)
+   at EPiServer.ServiceLocation.ServiceConfigurationProviderExtensions.<>c__DisplayClass33_0`1.<Configure>b__0(IServiceLocator l, TService s)
+   at EPiServer.ServiceLocation.Internal.StructureMapConfiguration.<>c__DisplayClass19_0`1.<Intercept>b__9(T service)
+   at lambda_method(Closure , IBuildSession , IContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , IBuildSession , IContext )
+   at StructureMap.Building.BuildPlan.Build(IBuildSession session, IContext context)
+   at StructureMap.BuildSession.BuildNewInSession(Type pluginType, Instance instance)
+   at StructureMap.BuildSession.BuildNewInOriginalContext(Type pluginType, Instance instance)
+   at StructureMap.Pipeline.LifecycleObjectCache.buildWithSession(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.Pipeline.LifecycleObjectCache.<>c__DisplayClass5_0.<Get>b__0(Int32 _)
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.<>c__DisplayClass1_1`2.<GetOrAdd>b__1()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.CreateValue()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.get_Value()
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.GetOrAdd[TKey,TValue](ConcurrentDictionary`2 cache, TKey key, Func`2 valueFactory)
+   at StructureMap.Pipeline.LifecycleObjectCache.Get(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.BuildSession.ResolveFromLifecycle(Type pluginType, Instance instance)
+   at StructureMap.SessionCache.GetObject(Type pluginType, Instance instance, ILifecycle lifecycle)
+   at StructureMap.SessionCache.GetDefault(Type pluginType, IPipelineGraph pipelineGraph)
+   at StructureMap.Container.GetInstance(Type pluginType)
+   at EPiServer.ServiceLocation.StructureMapServiceLocator.DoGetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   --- End of inner exception stack trace ---
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType)
+   at EPiServer.ServiceLocation.Internal.ReflectiveServiceConfigurationHelper.<>c__DisplayClass0_2.<TryRegisterServiceFactoryMember>b__4(ParameterInfo p)
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at EPiServer.ServiceLocation.Internal.ReflectiveServiceConfigurationHelper.<>c__DisplayClass0_0.<TryRegisterServiceFactoryMember>b__2(IServiceLocator c)
+   at EPiServer.ServiceLocation.Internal.StructureMapConfiguration.TypedFactory`1.<Create>b__2_0(IServiceLocator s)
+   at lambda_method(Closure , IBuildSession , IContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , IBuildSession , IContext )
+   at StructureMap.Building.BuildPlan.Build(IBuildSession session, IContext context)
+   at StructureMap.BuildSession.BuildNewInSession(Type pluginType, Instance instance)
+   at StructureMap.BuildSession.BuildNewInOriginalContext(Type pluginType, Instance instance)
+   at StructureMap.Pipeline.LifecycleObjectCache.buildWithSession(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.Pipeline.LifecycleObjectCache.<>c__DisplayClass5_0.<Get>b__0(Int32 _)
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.<>c__DisplayClass1_1`2.<GetOrAdd>b__1()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.CreateValue()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.get_Value()
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.GetOrAdd[TKey,TValue](ConcurrentDictionary`2 cache, TKey key, Func`2 valueFactory)
+   at StructureMap.Pipeline.LifecycleObjectCache.Get(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.BuildSession.ResolveFromLifecycle(Type pluginType, Instance instance)
+   at StructureMap.SessionCache.GetObject(Type pluginType, Instance instance, ILifecycle lifecycle)
+   at StructureMap.SessionCache.GetDefault(Type pluginType, IPipelineGraph pipelineGraph)
+   at StructureMap.Container.GetInstance(Type pluginType)
+   at EPiServer.ServiceLocation.StructureMapServiceLocator.DoGetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   --- End of inner exception stack trace ---
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance[TService]()
+   at EPiServer.ServiceLocation.ServiceConfigurationProviderExtensions.<>c__34`2.<Forward>b__34_0(IServiceLocator s)
+   at EPiServer.ServiceLocation.Internal.StructureMapConfiguration.TypedFactory`1.<Create>b__2_0(IServiceLocator s)
+   at lambda_method(Closure , IBuildSession , IContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , IBuildSession , IContext )
+   at StructureMap.Building.BuildPlan.Build(IBuildSession session, IContext context)
+   at StructureMap.BuildSession.BuildNewInSession(Type pluginType, Instance instance)
+   at StructureMap.BuildSession.BuildNewInOriginalContext(Type pluginType, Instance instance)
+   at StructureMap.Pipeline.LifecycleObjectCache.buildWithSession(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.Pipeline.LifecycleObjectCache.<>c__DisplayClass5_0.<Get>b__0(Int32 _)
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.<>c__DisplayClass1_1`2.<GetOrAdd>b__1()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.CreateValue()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.get_Value()
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.GetOrAdd[TKey,TValue](ConcurrentDictionary`2 cache, TKey key, Func`2 valueFactory)
+   at StructureMap.Pipeline.LifecycleObjectCache.Get(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.BuildSession.ResolveFromLifecycle(Type pluginType, Instance instance)
+   at StructureMap.SessionCache.GetObject(Type pluginType, Instance instance, ILifecycle lifecycle)
+   at StructureMap.SessionCache.GetDefault(Type pluginType, IPipelineGraph pipelineGraph)
+   at StructureMap.Container.GetInstance(Type pluginType)
+   at EPiServer.ServiceLocation.StructureMapServiceLocator.DoGetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   --- End of inner exception stack trace ---
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance[TService]()
+   at EPiServer.Core.Internal.DefaultContentProviderManager.get_Instance()
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at EPiServer.ServiceLocation.Internal.ReflectiveServiceConfigurationHelper.<>c__DisplayClass0_1.<TryRegisterServiceFactoryMember>b__3(IServiceLocator c)
+   at EPiServer.ServiceLocation.Internal.StructureMapConfiguration.TypedFactory`1.<Create>b__2_0(IServiceLocator s)
+   at lambda_method(Closure , IBuildSession , IContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , IBuildSession , IContext )
+   at StructureMap.Building.BuildPlan.Build(IBuildSession session, IContext context)
+   at StructureMap.BuildSession.BuildNewInSession(Type pluginType, Instance instance)
+   at StructureMap.BuildSession.BuildNewInOriginalContext(Type pluginType, Instance instance)
+   at StructureMap.Pipeline.LifecycleObjectCache.buildWithSession(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.Pipeline.LifecycleObjectCache.<>c__DisplayClass5_0.<Get>b__0(Int32 _)
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.<>c__DisplayClass1_1`2.<GetOrAdd>b__1()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.CreateValue()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.get_Value()
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.GetOrAdd[TKey,TValue](ConcurrentDictionary`2 cache, TKey key, Func`2 valueFactory)
+   at StructureMap.Pipeline.LifecycleObjectCache.Get(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.BuildSession.ResolveFromLifecycle(Type pluginType, Instance instance)
+   at StructureMap.SessionCache.GetObject(Type pluginType, Instance instance, ILifecycle lifecycle)
+   at StructureMap.SessionCache.GetDefault(Type pluginType, IPipelineGraph pipelineGraph)
+   at StructureMap.Container.GetInstance(Type pluginType)
+   at EPiServer.ServiceLocation.StructureMapServiceLocator.DoGetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   --- End of inner exception stack trace ---
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance[TService]()
+   at EPiServer.Core.Internal.DefaultContentModelUsageService.get_Instance()
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at EPiServer.ServiceLocation.Internal.ReflectiveServiceConfigurationHelper.<>c__DisplayClass0_1.<TryRegisterServiceFactoryMember>b__3(IServiceLocator c)
+   at EPiServer.ServiceLocation.Internal.StructureMapConfiguration.TypedFactory`1.<Create>b__2_0(IServiceLocator s)
+   at lambda_method(Closure , IBuildSession , IContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , IBuildSession , IContext )
+   at StructureMap.Building.BuildPlan.Build(IBuildSession session, IContext context)
+   at StructureMap.BuildSession.BuildNewInSession(Type pluginType, Instance instance)
+   at StructureMap.BuildSession.BuildNewInOriginalContext(Type pluginType, Instance instance)
+   at StructureMap.Pipeline.LifecycleObjectCache.buildWithSession(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.Pipeline.LifecycleObjectCache.<>c__DisplayClass5_0.<Get>b__0(Int32 _)
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.<>c__DisplayClass1_1`2.<GetOrAdd>b__1()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.CreateValue()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.get_Value()
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.GetOrAdd[TKey,TValue](ConcurrentDictionary`2 cache, TKey key, Func`2 valueFactory)
+   at StructureMap.Pipeline.LifecycleObjectCache.Get(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.BuildSession.ResolveFromLifecycle(Type pluginType, Instance instance)
+   at StructureMap.SessionCache.GetObject(Type pluginType, Instance instance, ILifecycle lifecycle)
+   at StructureMap.SessionCache.GetDefault(Type pluginType, IPipelineGraph pipelineGraph)
+   at StructureMap.Container.GetInstance(Type pluginType)
+   at EPiServer.ServiceLocation.StructureMapServiceLocator.DoGetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   --- End of inner exception stack trace ---
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance[TService]()
+   at EPiServer.Initialization.Internal.ContentFactoryInitialization.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.<>c__DisplayClass2_0.<Initialize>b__0()
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Execute(Action a, String key)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()
+2018-11-05 12:50:05,254 [150] ERROR EPiServer.Framework.Initialization.InitializationEngine: Initialize action failed for 'Initialize on class EPiServer.Initialization.Internal.ContentFactoryInitialization, EPiServer, Version=11.10.5.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7'
+EPiServer.ServiceLocation.ActivationException: Activation error occurred while trying to get instance of type ContentFactory, key "" ---> StructureMap.Building.StructureMapBuildException: Failure while building 'Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentModelUsage,EPiServer.Core.IContentModelUsage]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentModelUsage])._serviceLocator)', check the inner exception for details
+1.) Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentModelUsage,EPiServer.Core.IContentModelUsage]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentModelUsage])._serviceLocator)
+2.) Instance of EPiServer.Core.IContentModelUsage
+3.) new ModelMerger(*Default of IContentModelUsage*, *Default of ContentModelOptions*)
+4.) EPiServer.DataAbstraction.RuntimeModel.Internal.ModelMerger
+5.) Instance of EPiServer.DataAbstraction.RuntimeModel.Internal.ModelMerger
+6.) new DefaultPropertyDefinitionRepository(*Default of ContentTypeModelRepository*, *Default of ITabDefinitionRepository*, *Default of ServiceAccessor<PropertyDefinitionDB>*, *Default of ModelMerger*, *Default of ISynchronizedObjectInstanceCache*)
+7.) EPiServer.DataAbstraction.Internal.DefaultPropertyDefinitionRepository
+8.) Instance of EPiServer.DataAbstraction.IPropertyDefinitionRepository (EPiServer.DataAbstraction.Internal.DefaultPropertyDefinitionRepository)
+9.) new ContentTypeDB(*Default of ServiceAccessor<IDatabaseExecutor>*, *Default of IPropertyDefinitionRepository*, *Default of IPropertySettingsRepository*, *Default of ContentTypeModelRepository*, *Default of DatabaseDateTimeHandler*, *Default of ISynchronizedObjectInstanceCache*, *Default of IPrincipalAccessor*)
+10.) EPiServer.DataAccess.Internal.ContentTypeDB
+11.) Instance of EPiServer.DataAccess.Internal.ContentTypeDB
+12.) new DefaultContentTypeRepository(*Default of ContentTypeModelRepository*, *Default of ContentTypeDB*, *Default of ModelMerger*, *Default of ITabDefinitionRepository*, *Default of IPropertyDefinitionTypeRepository*, *Default of ITypeReferenceAnalyzer*, *Default of IPropertyDefinitionRepository*, *Default of ISynchronizedObjectInstanceCache*)
+13.) EPiServer.DataAbstraction.Internal.DefaultContentTypeRepository
+14.) Instance of EPiServer.DataAbstraction.IContentTypeRepository (EPiServer.DataAbstraction.Internal.DefaultContentTypeRepository)
+15.) new ContentDataBuilder(*Default of IPropertyDataFactory*, *Default of IContentTypeRepository*, *Default of IContentDataFactory<BlockData>*, *Default of ILanguageBranchRepository*, *Default of IPageDataMetadataBuilder*, *Default of IContentLanguageAccessor*, *Default of IPrincipalAccessor*)
+16.) EPiServer.Construction.Internal.ContentDataBuilder
+17.) Instance of EPiServer.Construction.IContentDataBuilder (EPiServer.Construction.Internal.ContentDataBuilder)
+18.) new SharedBlockFactory(*Default of IContentDataBuilder*, *Default of ConstructorParameterResolver*, *Default of ServiceAccessor<ContentDataInterceptor>*)
+19.) EPiServer.Construction.Internal.SharedBlockFactory
+20.) Instance of EPiServer.Construction.ISharedBlockFactory (EPiServer.Construction.Internal.SharedBlockFactory)
+21.) new ContentFactory(*Default of ISharedBlockFactory*, *Default of IContentDataFactory<IContent>*, *Default of IContentDataFactory<PageData>*, *Default of IContentDataBuilder*, *Default of IPropertyDataFactory*)
+22.) EPiServer.Construction.Internal.ContentFactory
+23.) Instance of EPiServer.Construction.Internal.ContentFactory
+24.) Container.GetInstance(EPiServer.Construction.Internal.ContentFactory)
+ ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> EPiServer.ServiceLocation.ActivationException: Activation error occurred while trying to get instance of type DefaultContentModelUsageService, key "" ---> StructureMap.Building.StructureMapBuildException: Failure while building 'Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentProviderManager,EPiServer.Core.IContentProviderManager]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentProviderManager])._serviceLocator)', check the inner exception for details
+1.) Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentProviderManager,EPiServer.Core.IContentProviderManager]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentProviderManager])._serviceLocator)
+2.) Instance of EPiServer.Core.IContentProviderManager
+3.) new DefaultContentModelUsageService(*Default of IContentProviderManager*)
+4.) EPiServer.Core.Internal.DefaultContentModelUsageService
+5.) Instance of EPiServer.Core.Internal.DefaultContentModelUsageService
+6.) Container.GetInstance(EPiServer.Core.Internal.DefaultContentModelUsageService)
+ ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> EPiServer.ServiceLocation.ActivationException: Activation error occurred while trying to get instance of type DefaultContentProviderManager, key "" ---> StructureMap.Building.StructureMapBuildException: Failure while building 'Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentLanguageAccessor,EPiServer.Core.IContentLanguageAccessor]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentLanguageAccessor])._serviceLocator)', check the inner exception for details
+1.) Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentLanguageAccessor,EPiServer.Core.IContentLanguageAccessor]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentLanguageAccessor])._serviceLocator)
+2.) Instance of EPiServer.Core.IContentLanguageAccessor
+3.) new DefaultContentProviderManager(*Default of IContentLanguageAccessor*)
+4.) EPiServer.Core.Internal.DefaultContentProviderManager
+5.) Instance of EPiServer.Core.Internal.DefaultContentProviderManager
+6.) Container.GetInstance(EPiServer.Core.Internal.DefaultContentProviderManager)
+ ---> EPiServer.ServiceLocation.ActivationException: Activation error occurred while trying to get instance of type ContentLanguageImplementation, key "" ---> StructureMap.Building.StructureMapBuildException: Failure while building 'Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Framework.Localization.LocalizationService,EPiServer.Framework.Localization.LocalizationService]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Framework.Localization.LocalizationService])._serviceLocator)', check the inner exception for details
+1.) Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Framework.Localization.LocalizationService,EPiServer.Framework.Localization.LocalizationService]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Framework.Localization.LocalizationService])._serviceLocator)
+2.) Instance of EPiServer.Framework.Localization.LocalizationService
+3.) new LanguageBranchRepository(*Default of LanguageBranchDB*, *Default of LocalizationService*, *Default of ISynchronizedObjectInstanceCache*)
+4.) EPiServer.DataAbstraction.Internal.LanguageBranchRepository
+5.) Instance of EPiServer.DataAbstraction.ILanguageBranchRepository (EPiServer.DataAbstraction.Internal.LanguageBranchRepository)
+6.) new ContentLanguageImplementation(*Default of ILanguageBranchRepository*, *Default of HostLanguageResolver*, *Default of ServiceAccessor<HttpRequestBase>*, *Default of ContextCache*)
+7.) EPiServer.Globalization.Internal.ContentLanguageImplementation
+8.) Instance of EPiServer.Globalization.Internal.ContentLanguageImplementation
+9.) Container.GetInstance(EPiServer.Globalization.Internal.ContentLanguageImplementation)
+ ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Configuration.ConfigurationErrorsException: Specified directory for FileSystemWatcher with path 'C:\Users\Stella\Desktop\OnboardingProgram\EpiserverProjects\Training\AlloyTraining\Resources\LanguageFiles' does not exist
+   at EPiServer.Framework.Internal.ProviderActivatorUtilities.TryInvokeInitialize(IEnumerable`1 initializeMethods, Object provider, Boolean captureExceptions, Object[] suggestedParameters)
+   at EPiServer.Framework.Internal.ProviderActivatorUtilities.CreateProvider[TProviderContract](IServiceLocator serviceLocator, String name, Type providerType, Object options, Boolean captureInitializeExceptions)
+   at EPiServer.Framework.Localization.ProviderBasedLocalizationService.Create(ResourceKeyHandler keyHandler, LocalizationOptions localizationOptions, IServiceLocator serviceLocator)
+   at EPiServer.Framework.Localization.ProviderBasedLocalizationService.CreateLocalizationService(ResourceKeyHandler keyHandler, LocalizationOptions localizationOptions, IServiceLocator serviceLocator)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at EPiServer.ServiceLocation.Internal.ReflectiveServiceConfigurationHelper.<>c__DisplayClass0_0.<TryRegisterServiceFactoryMember>b__2(IServiceLocator c)
+   at EPiServer.ServiceLocation.Internal.StructureMapConfiguration.TypedFactory`1.<Create>b__2_0(IServiceLocator s)
+   at lambda_method(Closure , IBuildSession , IContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , IBuildSession , IContext )
+   at StructureMap.Building.BuildPlan.Build(IBuildSession session, IContext context)
+   at StructureMap.BuildSession.BuildNewInSession(Type pluginType, Instance instance)
+   at StructureMap.BuildSession.BuildNewInOriginalContext(Type pluginType, Instance instance)
+   at StructureMap.Pipeline.LifecycleObjectCache.buildWithSession(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.Pipeline.LifecycleObjectCache.<>c__DisplayClass5_0.<Get>b__0(Int32 _)
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.<>c__DisplayClass1_1`2.<GetOrAdd>b__1()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.CreateValue()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.get_Value()
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.GetOrAdd[TKey,TValue](ConcurrentDictionary`2 cache, TKey key, Func`2 valueFactory)
+   at StructureMap.Pipeline.LifecycleObjectCache.Get(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.BuildSession.ResolveFromLifecycle(Type pluginType, Instance instance)
+   at StructureMap.SessionCache.GetObject(Type pluginType, Instance instance, ILifecycle lifecycle)
+   at StructureMap.SessionCache.GetDefault(Type pluginType, IPipelineGraph pipelineGraph)
+   at StructureMap.Container.GetInstance(Type pluginType)
+   at EPiServer.ServiceLocation.StructureMapServiceLocator.DoGetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   --- End of inner exception stack trace ---
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance[TService]()
+   at EPiServer.ServiceLocation.ServiceConfigurationProviderExtensions.<>c__34`2.<Forward>b__34_0(IServiceLocator s)
+   at EPiServer.ServiceLocation.Internal.StructureMapConfiguration.TypedFactory`1.<Create>b__2_0(IServiceLocator s)
+   at lambda_method(Closure , IBuildSession , IContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , IBuildSession , IContext )
+   at StructureMap.Building.BuildPlan.Build(IBuildSession session, IContext context)
+   at StructureMap.BuildSession.BuildNewInSession(Type pluginType, Instance instance)
+   at StructureMap.BuildSession.BuildNewInOriginalContext(Type pluginType, Instance instance)
+   at StructureMap.Pipeline.LifecycleObjectCache.buildWithSession(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.Pipeline.LifecycleObjectCache.<>c__DisplayClass5_0.<Get>b__0(Int32 _)
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.<>c__DisplayClass1_1`2.<GetOrAdd>b__1()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.CreateValue()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.get_Value()
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.GetOrAdd[TKey,TValue](ConcurrentDictionary`2 cache, TKey key, Func`2 valueFactory)
+   at StructureMap.Pipeline.LifecycleObjectCache.Get(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.BuildSession.ResolveFromLifecycle(Type pluginType, Instance instance)
+   at StructureMap.SessionCache.GetObject(Type pluginType, Instance instance, ILifecycle lifecycle)
+   at StructureMap.SessionCache.GetDefault(Type pluginType, IPipelineGraph pipelineGraph)
+   at StructureMap.Container.GetInstance(Type pluginType)
+   at EPiServer.ServiceLocation.StructureMapServiceLocator.DoGetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   --- End of inner exception stack trace ---
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance[TService]()
+   at EPiServer.Core.Internal.DefaultContentProviderManager.get_Instance()
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at EPiServer.ServiceLocation.Internal.ReflectiveServiceConfigurationHelper.<>c__DisplayClass0_1.<TryRegisterServiceFactoryMember>b__3(IServiceLocator c)
+   at EPiServer.ServiceLocation.Internal.StructureMapConfiguration.TypedFactory`1.<Create>b__2_0(IServiceLocator s)
+   at lambda_method(Closure , IBuildSession , IContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , IBuildSession , IContext )
+   at StructureMap.Building.BuildPlan.Build(IBuildSession session, IContext context)
+   at StructureMap.BuildSession.BuildNewInSession(Type pluginType, Instance instance)
+   at StructureMap.BuildSession.BuildNewInOriginalContext(Type pluginType, Instance instance)
+   at StructureMap.Pipeline.LifecycleObjectCache.buildWithSession(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.Pipeline.LifecycleObjectCache.<>c__DisplayClass5_0.<Get>b__0(Int32 _)
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.<>c__DisplayClass1_1`2.<GetOrAdd>b__1()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.CreateValue()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.get_Value()
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.GetOrAdd[TKey,TValue](ConcurrentDictionary`2 cache, TKey key, Func`2 valueFactory)
+   at StructureMap.Pipeline.LifecycleObjectCache.Get(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.BuildSession.ResolveFromLifecycle(Type pluginType, Instance instance)
+   at StructureMap.SessionCache.GetObject(Type pluginType, Instance instance, ILifecycle lifecycle)
+   at StructureMap.SessionCache.GetDefault(Type pluginType, IPipelineGraph pipelineGraph)
+   at StructureMap.Container.GetInstance(Type pluginType)
+   at EPiServer.ServiceLocation.StructureMapServiceLocator.DoGetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   --- End of inner exception stack trace ---
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance[TService]()
+   at EPiServer.Core.Internal.DefaultContentModelUsageService.get_Instance()
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at EPiServer.ServiceLocation.Internal.ReflectiveServiceConfigurationHelper.<>c__DisplayClass0_1.<TryRegisterServiceFactoryMember>b__3(IServiceLocator c)
+   at EPiServer.ServiceLocation.Internal.StructureMapConfiguration.TypedFactory`1.<Create>b__2_0(IServiceLocator s)
+   at lambda_method(Closure , IBuildSession , IContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , IBuildSession , IContext )
+   at StructureMap.Building.BuildPlan.Build(IBuildSession session, IContext context)
+   at StructureMap.BuildSession.BuildNewInSession(Type pluginType, Instance instance)
+   at StructureMap.BuildSession.BuildNewInOriginalContext(Type pluginType, Instance instance)
+   at StructureMap.Pipeline.LifecycleObjectCache.buildWithSession(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.Pipeline.LifecycleObjectCache.<>c__DisplayClass5_0.<Get>b__0(Int32 _)
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.<>c__DisplayClass1_1`2.<GetOrAdd>b__1()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.CreateValue()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.get_Value()
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.GetOrAdd[TKey,TValue](ConcurrentDictionary`2 cache, TKey key, Func`2 valueFactory)
+   at StructureMap.Pipeline.LifecycleObjectCache.Get(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.BuildSession.ResolveFromLifecycle(Type pluginType, Instance instance)
+   at StructureMap.SessionCache.GetObject(Type pluginType, Instance instance, ILifecycle lifecycle)
+   at StructureMap.SessionCache.GetDefault(Type pluginType, IPipelineGraph pipelineGraph)
+   at StructureMap.Container.GetInstance(Type pluginType)
+   at EPiServer.ServiceLocation.StructureMapServiceLocator.DoGetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   --- End of inner exception stack trace ---
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance[TService]()
+   at EPiServer.Initialization.Internal.ContentFactoryInitialization.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.<>c__DisplayClass2_0.<Initialize>b__0()
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Execute(Action a, String key)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()
+EPiServer.ServiceLocation.ActivationException: Activation error occurred while trying to get instance of type ContentFactory, key "" ---> StructureMap.Building.StructureMapBuildException: Failure while building 'Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentModelUsage,EPiServer.Core.IContentModelUsage]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentModelUsage])._serviceLocator)', check the inner exception for details
+1.) Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentModelUsage,EPiServer.Core.IContentModelUsage]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentModelUsage])._serviceLocator)
+2.) Instance of EPiServer.Core.IContentModelUsage
+3.) new ModelMerger(*Default of IContentModelUsage*, *Default of ContentModelOptions*)
+4.) EPiServer.DataAbstraction.RuntimeModel.Internal.ModelMerger
+5.) Instance of EPiServer.DataAbstraction.RuntimeModel.Internal.ModelMerger
+6.) new DefaultPropertyDefinitionRepository(*Default of ContentTypeModelRepository*, *Default of ITabDefinitionRepository*, *Default of ServiceAccessor<PropertyDefinitionDB>*, *Default of ModelMerger*, *Default of ISynchronizedObjectInstanceCache*)
+7.) EPiServer.DataAbstraction.Internal.DefaultPropertyDefinitionRepository
+8.) Instance of EPiServer.DataAbstraction.IPropertyDefinitionRepository (EPiServer.DataAbstraction.Internal.DefaultPropertyDefinitionRepository)
+9.) new ContentTypeDB(*Default of ServiceAccessor<IDatabaseExecutor>*, *Default of IPropertyDefinitionRepository*, *Default of IPropertySettingsRepository*, *Default of ContentTypeModelRepository*, *Default of DatabaseDateTimeHandler*, *Default of ISynchronizedObjectInstanceCache*, *Default of IPrincipalAccessor*)
+10.) EPiServer.DataAccess.Internal.ContentTypeDB
+11.) Instance of EPiServer.DataAccess.Internal.ContentTypeDB
+12.) new DefaultContentTypeRepository(*Default of ContentTypeModelRepository*, *Default of ContentTypeDB*, *Default of ModelMerger*, *Default of ITabDefinitionRepository*, *Default of IPropertyDefinitionTypeRepository*, *Default of ITypeReferenceAnalyzer*, *Default of IPropertyDefinitionRepository*, *Default of ISynchronizedObjectInstanceCache*)
+13.) EPiServer.DataAbstraction.Internal.DefaultContentTypeRepository
+14.) Instance of EPiServer.DataAbstraction.IContentTypeRepository (EPiServer.DataAbstraction.Internal.DefaultContentTypeRepository)
+15.) new ContentDataBuilder(*Default of IPropertyDataFactory*, *Default of IContentTypeRepository*, *Default of IContentDataFactory<BlockData>*, *Default of ILanguageBranchRepository*, *Default of IPageDataMetadataBuilder*, *Default of IContentLanguageAccessor*, *Default of IPrincipalAccessor*)
+16.) EPiServer.Construction.Internal.ContentDataBuilder
+17.) Instance of EPiServer.Construction.IContentDataBuilder (EPiServer.Construction.Internal.ContentDataBuilder)
+18.) new SharedBlockFactory(*Default of IContentDataBuilder*, *Default of ConstructorParameterResolver*, *Default of ServiceAccessor<ContentDataInterceptor>*)
+19.) EPiServer.Construction.Internal.SharedBlockFactory
+20.) Instance of EPiServer.Construction.ISharedBlockFactory (EPiServer.Construction.Internal.SharedBlockFactory)
+21.) new ContentFactory(*Default of ISharedBlockFactory*, *Default of IContentDataFactory<IContent>*, *Default of IContentDataFactory<PageData>*, *Default of IContentDataBuilder*, *Default of IPropertyDataFactory*)
+22.) EPiServer.Construction.Internal.ContentFactory
+23.) Instance of EPiServer.Construction.Internal.ContentFactory
+24.) Container.GetInstance(EPiServer.Construction.Internal.ContentFactory)
+ ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> EPiServer.ServiceLocation.ActivationException: Activation error occurred while trying to get instance of type DefaultContentModelUsageService, key "" ---> StructureMap.Building.StructureMapBuildException: Failure while building 'Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentProviderManager,EPiServer.Core.IContentProviderManager]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentProviderManager])._serviceLocator)', check the inner exception for details
+1.) Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentProviderManager,EPiServer.Core.IContentProviderManager]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentProviderManager])._serviceLocator)
+2.) Instance of EPiServer.Core.IContentProviderManager
+3.) new DefaultContentModelUsageService(*Default of IContentProviderManager*)
+4.) EPiServer.Core.Internal.DefaultContentModelUsageService
+5.) Instance of EPiServer.Core.Internal.DefaultContentModelUsageService
+6.) Container.GetInstance(EPiServer.Core.Internal.DefaultContentModelUsageService)
+ ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> EPiServer.ServiceLocation.ActivationException: Activation error occurred while trying to get instance of type DefaultContentProviderManager, key "" ---> StructureMap.Building.StructureMapBuildException: Failure while building 'Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentLanguageAccessor,EPiServer.Core.IContentLanguageAccessor]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentLanguageAccessor])._serviceLocator)', check the inner exception for details
+1.) Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentLanguageAccessor,EPiServer.Core.IContentLanguageAccessor]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentLanguageAccessor])._serviceLocator)
+2.) Instance of EPiServer.Core.IContentLanguageAccessor
+3.) new DefaultContentProviderManager(*Default of IContentLanguageAccessor*)
+4.) EPiServer.Core.Internal.DefaultContentProviderManager
+5.) Instance of EPiServer.Core.Internal.DefaultContentProviderManager
+6.) Container.GetInstance(EPiServer.Core.Internal.DefaultContentProviderManager)
+ ---> EPiServer.ServiceLocation.ActivationException: Activation error occurred while trying to get instance of type ContentLanguageImplementation, key "" ---> StructureMap.Building.StructureMapBuildException: Failure while building 'Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Framework.Localization.LocalizationService,EPiServer.Framework.Localization.LocalizationService]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Framework.Localization.LocalizationService])._serviceLocator)', check the inner exception for details
+1.) Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Framework.Localization.LocalizationService,EPiServer.Framework.Localization.LocalizationService]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Framework.Localization.LocalizationService])._serviceLocator)
+2.) Instance of EPiServer.Framework.Localization.LocalizationService
+3.) new LanguageBranchRepository(*Default of LanguageBranchDB*, *Default of LocalizationService*, *Default of ISynchronizedObjectInstanceCache*)
+4.) EPiServer.DataAbstraction.Internal.LanguageBranchRepository
+5.) Instance of EPiServer.DataAbstraction.ILanguageBranchRepository (EPiServer.DataAbstraction.Internal.LanguageBranchRepository)
+6.) new ContentLanguageImplementation(*Default of ILanguageBranchRepository*, *Default of HostLanguageResolver*, *Default of ServiceAccessor<HttpRequestBase>*, *Default of ContextCache*)
+7.) EPiServer.Globalization.Internal.ContentLanguageImplementation
+8.) Instance of EPiServer.Globalization.Internal.ContentLanguageImplementation
+9.) Container.GetInstance(EPiServer.Globalization.Internal.ContentLanguageImplementation)
+ ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Configuration.ConfigurationErrorsException: Specified directory for FileSystemWatcher with path 'C:\Users\Stella\Desktop\OnboardingProgram\EpiserverProjects\Training\AlloyTraining\Resources\LanguageFiles' does not exist
+   at EPiServer.Framework.Internal.ProviderActivatorUtilities.TryInvokeInitialize(IEnumerable`1 initializeMethods, Object provider, Boolean captureExceptions, Object[] suggestedParameters)
+   at EPiServer.Framework.Internal.ProviderActivatorUtilities.CreateProvider[TProviderContract](IServiceLocator serviceLocator, String name, Type providerType, Object options, Boolean captureInitializeExceptions)
+   at EPiServer.Framework.Localization.ProviderBasedLocalizationService.Create(ResourceKeyHandler keyHandler, LocalizationOptions localizationOptions, IServiceLocator serviceLocator)
+   at EPiServer.Framework.Localization.ProviderBasedLocalizationService.CreateLocalizationService(ResourceKeyHandler keyHandler, LocalizationOptions localizationOptions, IServiceLocator serviceLocator)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at EPiServer.ServiceLocation.Internal.ReflectiveServiceConfigurationHelper.<>c__DisplayClass0_0.<TryRegisterServiceFactoryMember>b__2(IServiceLocator c)
+   at EPiServer.ServiceLocation.Internal.StructureMapConfiguration.TypedFactory`1.<Create>b__2_0(IServiceLocator s)
+   at lambda_method(Closure , IBuildSession , IContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , IBuildSession , IContext )
+   at StructureMap.Building.BuildPlan.Build(IBuildSession session, IContext context)
+   at StructureMap.BuildSession.BuildNewInSession(Type pluginType, Instance instance)
+   at StructureMap.BuildSession.BuildNewInOriginalContext(Type pluginType, Instance instance)
+   at StructureMap.Pipeline.LifecycleObjectCache.buildWithSession(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.Pipeline.LifecycleObjectCache.<>c__DisplayClass5_0.<Get>b__0(Int32 _)
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.<>c__DisplayClass1_1`2.<GetOrAdd>b__1()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.CreateValue()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.get_Value()
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.GetOrAdd[TKey,TValue](ConcurrentDictionary`2 cache, TKey key, Func`2 valueFactory)
+   at StructureMap.Pipeline.LifecycleObjectCache.Get(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.BuildSession.ResolveFromLifecycle(Type pluginType, Instance instance)
+   at StructureMap.SessionCache.GetObject(Type pluginType, Instance instance, ILifecycle lifecycle)
+   at StructureMap.SessionCache.GetDefault(Type pluginType, IPipelineGraph pipelineGraph)
+   at StructureMap.Container.GetInstance(Type pluginType)
+   at EPiServer.ServiceLocation.StructureMapServiceLocator.DoGetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   --- End of inner exception stack trace ---
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance[TService]()
+   at EPiServer.ServiceLocation.ServiceConfigurationProviderExtensions.<>c__34`2.<Forward>b__34_0(IServiceLocator s)
+   at EPiServer.ServiceLocation.Internal.StructureMapConfiguration.TypedFactory`1.<Create>b__2_0(IServiceLocator s)
+   at lambda_method(Closure , IBuildSession , IContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , IBuildSession , IContext )
+   at StructureMap.Building.BuildPlan.Build(IBuildSession session, IContext context)
+   at StructureMap.BuildSession.BuildNewInSession(Type pluginType, Instance instance)
+   at StructureMap.BuildSession.BuildNewInOriginalContext(Type pluginType, Instance instance)
+   at StructureMap.Pipeline.LifecycleObjectCache.buildWithSession(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.Pipeline.LifecycleObjectCache.<>c__DisplayClass5_0.<Get>b__0(Int32 _)
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.<>c__DisplayClass1_1`2.<GetOrAdd>b__1()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.CreateValue()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.get_Value()
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.GetOrAdd[TKey,TValue](ConcurrentDictionary`2 cache, TKey key, Func`2 valueFactory)
+   at StructureMap.Pipeline.LifecycleObjectCache.Get(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.BuildSession.ResolveFromLifecycle(Type pluginType, Instance instance)
+   at StructureMap.SessionCache.GetObject(Type pluginType, Instance instance, ILifecycle lifecycle)
+   at StructureMap.SessionCache.GetDefault(Type pluginType, IPipelineGraph pipelineGraph)
+   at StructureMap.Container.GetInstance(Type pluginType)
+   at EPiServer.ServiceLocation.StructureMapServiceLocator.DoGetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   --- End of inner exception stack trace ---
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance[TService]()
+   at EPiServer.Core.Internal.DefaultContentProviderManager.get_Instance()
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at EPiServer.ServiceLocation.Internal.ReflectiveServiceConfigurationHelper.<>c__DisplayClass0_1.<TryRegisterServiceFactoryMember>b__3(IServiceLocator c)
+   at EPiServer.ServiceLocation.Internal.StructureMapConfiguration.TypedFactory`1.<Create>b__2_0(IServiceLocator s)
+   at lambda_method(Closure , IBuildSession , IContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , IBuildSession , IContext )
+   at StructureMap.Building.BuildPlan.Build(IBuildSession session, IContext context)
+   at StructureMap.BuildSession.BuildNewInSession(Type pluginType, Instance instance)
+   at StructureMap.BuildSession.BuildNewInOriginalContext(Type pluginType, Instance instance)
+   at StructureMap.Pipeline.LifecycleObjectCache.buildWithSession(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.Pipeline.LifecycleObjectCache.<>c__DisplayClass5_0.<Get>b__0(Int32 _)
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.<>c__DisplayClass1_1`2.<GetOrAdd>b__1()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.CreateValue()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.get_Value()
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.GetOrAdd[TKey,TValue](ConcurrentDictionary`2 cache, TKey key, Func`2 valueFactory)
+   at StructureMap.Pipeline.LifecycleObjectCache.Get(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.BuildSession.ResolveFromLifecycle(Type pluginType, Instance instance)
+   at StructureMap.SessionCache.GetObject(Type pluginType, Instance instance, ILifecycle lifecycle)
+   at StructureMap.SessionCache.GetDefault(Type pluginType, IPipelineGraph pipelineGraph)
+   at StructureMap.Container.GetInstance(Type pluginType)
+   at EPiServer.ServiceLocation.StructureMapServiceLocator.DoGetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   --- End of inner exception stack trace ---
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance[TService]()
+   at EPiServer.Core.Internal.DefaultContentModelUsageService.get_Instance()
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at EPiServer.ServiceLocation.Internal.ReflectiveServiceConfigurationHelper.<>c__DisplayClass0_1.<TryRegisterServiceFactoryMember>b__3(IServiceLocator c)
+   at EPiServer.ServiceLocation.Internal.StructureMapConfiguration.TypedFactory`1.<Create>b__2_0(IServiceLocator s)
+   at lambda_method(Closure , IBuildSession , IContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , IBuildSession , IContext )
+   at StructureMap.Building.BuildPlan.Build(IBuildSession session, IContext context)
+   at StructureMap.BuildSession.BuildNewInSession(Type pluginType, Instance instance)
+   at StructureMap.BuildSession.BuildNewInOriginalContext(Type pluginType, Instance instance)
+   at StructureMap.Pipeline.LifecycleObjectCache.buildWithSession(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.Pipeline.LifecycleObjectCache.<>c__DisplayClass5_0.<Get>b__0(Int32 _)
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.<>c__DisplayClass1_1`2.<GetOrAdd>b__1()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.CreateValue()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.get_Value()
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.GetOrAdd[TKey,TValue](ConcurrentDictionary`2 cache, TKey key, Func`2 valueFactory)
+   at StructureMap.Pipeline.LifecycleObjectCache.Get(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.BuildSession.ResolveFromLifecycle(Type pluginType, Instance instance)
+   at StructureMap.SessionCache.GetObject(Type pluginType, Instance instance, ILifecycle lifecycle)
+   at StructureMap.SessionCache.GetDefault(Type pluginType, IPipelineGraph pipelineGraph)
+   at StructureMap.Container.GetInstance(Type pluginType)
+   at EPiServer.ServiceLocation.StructureMapServiceLocator.DoGetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   --- End of inner exception stack trace ---
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance[TService]()
+   at EPiServer.Initialization.Internal.ContentFactoryInitialization.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.<>c__DisplayClass2_0.<Initialize>b__0()
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Execute(Action a, String key)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()
+2018-11-05 12:51:37,803 [1] ERROR EPiServer.Framework.Initialization.InitializationEngine: Initialize action failed for 'Initialize on class EPiServer.Initialization.Internal.ContentFactoryInitialization, EPiServer, Version=11.10.5.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7'
+EPiServer.ServiceLocation.ActivationException: Activation error occurred while trying to get instance of type ContentFactory, key "" ---> StructureMap.Building.StructureMapBuildException: Failure while building 'Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentModelUsage,EPiServer.Core.IContentModelUsage]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentModelUsage])._serviceLocator)', check the inner exception for details
+1.) Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentModelUsage,EPiServer.Core.IContentModelUsage]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentModelUsage])._serviceLocator)
+2.) Instance of EPiServer.Core.IContentModelUsage
+3.) new ModelMerger(*Default of IContentModelUsage*, *Default of ContentModelOptions*)
+4.) EPiServer.DataAbstraction.RuntimeModel.Internal.ModelMerger
+5.) Instance of EPiServer.DataAbstraction.RuntimeModel.Internal.ModelMerger
+6.) new DefaultPropertyDefinitionRepository(*Default of ContentTypeModelRepository*, *Default of ITabDefinitionRepository*, *Default of ServiceAccessor<PropertyDefinitionDB>*, *Default of ModelMerger*, *Default of ISynchronizedObjectInstanceCache*)
+7.) EPiServer.DataAbstraction.Internal.DefaultPropertyDefinitionRepository
+8.) Instance of EPiServer.DataAbstraction.IPropertyDefinitionRepository (EPiServer.DataAbstraction.Internal.DefaultPropertyDefinitionRepository)
+9.) new ContentTypeDB(*Default of ServiceAccessor<IDatabaseExecutor>*, *Default of IPropertyDefinitionRepository*, *Default of IPropertySettingsRepository*, *Default of ContentTypeModelRepository*, *Default of DatabaseDateTimeHandler*, *Default of ISynchronizedObjectInstanceCache*, *Default of IPrincipalAccessor*)
+10.) EPiServer.DataAccess.Internal.ContentTypeDB
+11.) Instance of EPiServer.DataAccess.Internal.ContentTypeDB
+12.) new DefaultContentTypeRepository(*Default of ContentTypeModelRepository*, *Default of ContentTypeDB*, *Default of ModelMerger*, *Default of ITabDefinitionRepository*, *Default of IPropertyDefinitionTypeRepository*, *Default of ITypeReferenceAnalyzer*, *Default of IPropertyDefinitionRepository*, *Default of ISynchronizedObjectInstanceCache*)
+13.) EPiServer.DataAbstraction.Internal.DefaultContentTypeRepository
+14.) Instance of EPiServer.DataAbstraction.IContentTypeRepository (EPiServer.DataAbstraction.Internal.DefaultContentTypeRepository)
+15.) new ContentDataBuilder(*Default of IPropertyDataFactory*, *Default of IContentTypeRepository*, *Default of IContentDataFactory<BlockData>*, *Default of ILanguageBranchRepository*, *Default of IPageDataMetadataBuilder*, *Default of IContentLanguageAccessor*, *Default of IPrincipalAccessor*)
+16.) EPiServer.Construction.Internal.ContentDataBuilder
+17.) Instance of EPiServer.Construction.IContentDataBuilder (EPiServer.Construction.Internal.ContentDataBuilder)
+18.) new SharedBlockFactory(*Default of IContentDataBuilder*, *Default of ConstructorParameterResolver*, *Default of ServiceAccessor<ContentDataInterceptor>*)
+19.) EPiServer.Construction.Internal.SharedBlockFactory
+20.) Instance of EPiServer.Construction.ISharedBlockFactory (EPiServer.Construction.Internal.SharedBlockFactory)
+21.) new ContentFactory(*Default of ISharedBlockFactory*, *Default of IContentDataFactory<IContent>*, *Default of IContentDataFactory<PageData>*, *Default of IContentDataBuilder*, *Default of IPropertyDataFactory*)
+22.) EPiServer.Construction.Internal.ContentFactory
+23.) Instance of EPiServer.Construction.Internal.ContentFactory
+24.) Container.GetInstance(EPiServer.Construction.Internal.ContentFactory)
+ ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> EPiServer.ServiceLocation.ActivationException: Activation error occurred while trying to get instance of type DefaultContentModelUsageService, key "" ---> StructureMap.Building.StructureMapBuildException: Failure while building 'Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentProviderManager,EPiServer.Core.IContentProviderManager]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentProviderManager])._serviceLocator)', check the inner exception for details
+1.) Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentProviderManager,EPiServer.Core.IContentProviderManager]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentProviderManager])._serviceLocator)
+2.) Instance of EPiServer.Core.IContentProviderManager
+3.) new DefaultContentModelUsageService(*Default of IContentProviderManager*)
+4.) EPiServer.Core.Internal.DefaultContentModelUsageService
+5.) Instance of EPiServer.Core.Internal.DefaultContentModelUsageService
+6.) Container.GetInstance(EPiServer.Core.Internal.DefaultContentModelUsageService)
+ ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> EPiServer.ServiceLocation.ActivationException: Activation error occurred while trying to get instance of type DefaultContentProviderManager, key "" ---> StructureMap.Building.StructureMapBuildException: Failure while building 'Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentLanguageAccessor,EPiServer.Core.IContentLanguageAccessor]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentLanguageAccessor])._serviceLocator)', check the inner exception for details
+1.) Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentLanguageAccessor,EPiServer.Core.IContentLanguageAccessor]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentLanguageAccessor])._serviceLocator)
+2.) Instance of EPiServer.Core.IContentLanguageAccessor
+3.) new DefaultContentProviderManager(*Default of IContentLanguageAccessor*)
+4.) EPiServer.Core.Internal.DefaultContentProviderManager
+5.) Instance of EPiServer.Core.Internal.DefaultContentProviderManager
+6.) Container.GetInstance(EPiServer.Core.Internal.DefaultContentProviderManager)
+ ---> EPiServer.ServiceLocation.ActivationException: Activation error occurred while trying to get instance of type ContentLanguageImplementation, key "" ---> StructureMap.Building.StructureMapBuildException: Failure while building 'Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Framework.Localization.LocalizationService,EPiServer.Framework.Localization.LocalizationService]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Framework.Localization.LocalizationService])._serviceLocator)', check the inner exception for details
+1.) Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Framework.Localization.LocalizationService,EPiServer.Framework.Localization.LocalizationService]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Framework.Localization.LocalizationService])._serviceLocator)
+2.) Instance of EPiServer.Framework.Localization.LocalizationService
+3.) new LanguageBranchRepository(*Default of LanguageBranchDB*, *Default of LocalizationService*, *Default of ISynchronizedObjectInstanceCache*)
+4.) EPiServer.DataAbstraction.Internal.LanguageBranchRepository
+5.) Instance of EPiServer.DataAbstraction.ILanguageBranchRepository (EPiServer.DataAbstraction.Internal.LanguageBranchRepository)
+6.) new ContentLanguageImplementation(*Default of ILanguageBranchRepository*, *Default of HostLanguageResolver*, *Default of ServiceAccessor<HttpRequestBase>*, *Default of ContextCache*)
+7.) EPiServer.Globalization.Internal.ContentLanguageImplementation
+8.) Instance of EPiServer.Globalization.Internal.ContentLanguageImplementation
+9.) Container.GetInstance(EPiServer.Globalization.Internal.ContentLanguageImplementation)
+ ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Configuration.ConfigurationErrorsException: Specified directory for FileSystemWatcher with path 'C:\Users\Stella\Desktop\OnboardingProgram\EpiserverProjects\Training\AlloyTraining\Resources\LanguageFiles' does not exist
+   at EPiServer.Framework.Internal.ProviderActivatorUtilities.TryInvokeInitialize(IEnumerable`1 initializeMethods, Object provider, Boolean captureExceptions, Object[] suggestedParameters)
+   at EPiServer.Framework.Internal.ProviderActivatorUtilities.CreateProvider[TProviderContract](IServiceLocator serviceLocator, String name, Type providerType, Object options, Boolean captureInitializeExceptions)
+   at EPiServer.Framework.Localization.ProviderBasedLocalizationService.Create(ResourceKeyHandler keyHandler, LocalizationOptions localizationOptions, IServiceLocator serviceLocator)
+   at EPiServer.Framework.Localization.ProviderBasedLocalizationService.CreateLocalizationService(ResourceKeyHandler keyHandler, LocalizationOptions localizationOptions, IServiceLocator serviceLocator)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at EPiServer.ServiceLocation.Internal.ReflectiveServiceConfigurationHelper.<>c__DisplayClass0_0.<TryRegisterServiceFactoryMember>b__2(IServiceLocator c)
+   at EPiServer.ServiceLocation.Internal.StructureMapConfiguration.TypedFactory`1.<Create>b__2_0(IServiceLocator s)
+   at lambda_method(Closure , IBuildSession , IContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , IBuildSession , IContext )
+   at StructureMap.Building.BuildPlan.Build(IBuildSession session, IContext context)
+   at StructureMap.BuildSession.BuildNewInSession(Type pluginType, Instance instance)
+   at StructureMap.BuildSession.BuildNewInOriginalContext(Type pluginType, Instance instance)
+   at StructureMap.Pipeline.LifecycleObjectCache.buildWithSession(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.Pipeline.LifecycleObjectCache.<>c__DisplayClass5_0.<Get>b__0(Int32 _)
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.<>c__DisplayClass1_1`2.<GetOrAdd>b__1()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.CreateValue()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.get_Value()
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.GetOrAdd[TKey,TValue](ConcurrentDictionary`2 cache, TKey key, Func`2 valueFactory)
+   at StructureMap.Pipeline.LifecycleObjectCache.Get(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.BuildSession.ResolveFromLifecycle(Type pluginType, Instance instance)
+   at StructureMap.SessionCache.GetObject(Type pluginType, Instance instance, ILifecycle lifecycle)
+   at StructureMap.SessionCache.GetDefault(Type pluginType, IPipelineGraph pipelineGraph)
+   at StructureMap.Container.GetInstance(Type pluginType)
+   at EPiServer.ServiceLocation.StructureMapServiceLocator.DoGetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   --- End of inner exception stack trace ---
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance[TService]()
+   at EPiServer.ServiceLocation.ServiceConfigurationProviderExtensions.<>c__34`2.<Forward>b__34_0(IServiceLocator s)
+   at EPiServer.ServiceLocation.Internal.StructureMapConfiguration.TypedFactory`1.<Create>b__2_0(IServiceLocator s)
+   at lambda_method(Closure , IBuildSession , IContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , IBuildSession , IContext )
+   at StructureMap.Building.BuildPlan.Build(IBuildSession session, IContext context)
+   at StructureMap.BuildSession.BuildNewInSession(Type pluginType, Instance instance)
+   at StructureMap.BuildSession.BuildNewInOriginalContext(Type pluginType, Instance instance)
+   at StructureMap.Pipeline.LifecycleObjectCache.buildWithSession(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.Pipeline.LifecycleObjectCache.<>c__DisplayClass5_0.<Get>b__0(Int32 _)
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.<>c__DisplayClass1_1`2.<GetOrAdd>b__1()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.CreateValue()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.get_Value()
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.GetOrAdd[TKey,TValue](ConcurrentDictionary`2 cache, TKey key, Func`2 valueFactory)
+   at StructureMap.Pipeline.LifecycleObjectCache.Get(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.BuildSession.ResolveFromLifecycle(Type pluginType, Instance instance)
+   at StructureMap.SessionCache.GetObject(Type pluginType, Instance instance, ILifecycle lifecycle)
+   at StructureMap.SessionCache.GetDefault(Type pluginType, IPipelineGraph pipelineGraph)
+   at StructureMap.Container.GetInstance(Type pluginType)
+   at EPiServer.ServiceLocation.StructureMapServiceLocator.DoGetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   --- End of inner exception stack trace ---
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance[TService]()
+   at EPiServer.Core.Internal.DefaultContentProviderManager.get_Instance()
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at EPiServer.ServiceLocation.Internal.ReflectiveServiceConfigurationHelper.<>c__DisplayClass0_1.<TryRegisterServiceFactoryMember>b__3(IServiceLocator c)
+   at EPiServer.ServiceLocation.Internal.StructureMapConfiguration.TypedFactory`1.<Create>b__2_0(IServiceLocator s)
+   at lambda_method(Closure , IBuildSession , IContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , IBuildSession , IContext )
+   at StructureMap.Building.BuildPlan.Build(IBuildSession session, IContext context)
+   at StructureMap.BuildSession.BuildNewInSession(Type pluginType, Instance instance)
+   at StructureMap.BuildSession.BuildNewInOriginalContext(Type pluginType, Instance instance)
+   at StructureMap.Pipeline.LifecycleObjectCache.buildWithSession(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.Pipeline.LifecycleObjectCache.<>c__DisplayClass5_0.<Get>b__0(Int32 _)
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.<>c__DisplayClass1_1`2.<GetOrAdd>b__1()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.CreateValue()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.get_Value()
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.GetOrAdd[TKey,TValue](ConcurrentDictionary`2 cache, TKey key, Func`2 valueFactory)
+   at StructureMap.Pipeline.LifecycleObjectCache.Get(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.BuildSession.ResolveFromLifecycle(Type pluginType, Instance instance)
+   at StructureMap.SessionCache.GetObject(Type pluginType, Instance instance, ILifecycle lifecycle)
+   at StructureMap.SessionCache.GetDefault(Type pluginType, IPipelineGraph pipelineGraph)
+   at StructureMap.Container.GetInstance(Type pluginType)
+   at EPiServer.ServiceLocation.StructureMapServiceLocator.DoGetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   --- End of inner exception stack trace ---
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance[TService]()
+   at EPiServer.Core.Internal.DefaultContentModelUsageService.get_Instance()
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at EPiServer.ServiceLocation.Internal.ReflectiveServiceConfigurationHelper.<>c__DisplayClass0_1.<TryRegisterServiceFactoryMember>b__3(IServiceLocator c)
+   at EPiServer.ServiceLocation.Internal.StructureMapConfiguration.TypedFactory`1.<Create>b__2_0(IServiceLocator s)
+   at lambda_method(Closure , IBuildSession , IContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , IBuildSession , IContext )
+   at StructureMap.Building.BuildPlan.Build(IBuildSession session, IContext context)
+   at StructureMap.BuildSession.BuildNewInSession(Type pluginType, Instance instance)
+   at StructureMap.BuildSession.BuildNewInOriginalContext(Type pluginType, Instance instance)
+   at StructureMap.Pipeline.LifecycleObjectCache.buildWithSession(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.Pipeline.LifecycleObjectCache.<>c__DisplayClass5_0.<Get>b__0(Int32 _)
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.<>c__DisplayClass1_1`2.<GetOrAdd>b__1()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.CreateValue()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.get_Value()
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.GetOrAdd[TKey,TValue](ConcurrentDictionary`2 cache, TKey key, Func`2 valueFactory)
+   at StructureMap.Pipeline.LifecycleObjectCache.Get(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.BuildSession.ResolveFromLifecycle(Type pluginType, Instance instance)
+   at StructureMap.SessionCache.GetObject(Type pluginType, Instance instance, ILifecycle lifecycle)
+   at StructureMap.SessionCache.GetDefault(Type pluginType, IPipelineGraph pipelineGraph)
+   at StructureMap.Container.GetInstance(Type pluginType)
+   at EPiServer.ServiceLocation.StructureMapServiceLocator.DoGetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   --- End of inner exception stack trace ---
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance[TService]()
+   at EPiServer.Initialization.Internal.ContentFactoryInitialization.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.<>c__DisplayClass2_0.<Initialize>b__0()
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Execute(Action a, String key)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()
+EPiServer.ServiceLocation.ActivationException: Activation error occurred while trying to get instance of type ContentFactory, key "" ---> StructureMap.Building.StructureMapBuildException: Failure while building 'Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentModelUsage,EPiServer.Core.IContentModelUsage]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentModelUsage])._serviceLocator)', check the inner exception for details
+1.) Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentModelUsage,EPiServer.Core.IContentModelUsage]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentModelUsage])._serviceLocator)
+2.) Instance of EPiServer.Core.IContentModelUsage
+3.) new ModelMerger(*Default of IContentModelUsage*, *Default of ContentModelOptions*)
+4.) EPiServer.DataAbstraction.RuntimeModel.Internal.ModelMerger
+5.) Instance of EPiServer.DataAbstraction.RuntimeModel.Internal.ModelMerger
+6.) new DefaultPropertyDefinitionRepository(*Default of ContentTypeModelRepository*, *Default of ITabDefinitionRepository*, *Default of ServiceAccessor<PropertyDefinitionDB>*, *Default of ModelMerger*, *Default of ISynchronizedObjectInstanceCache*)
+7.) EPiServer.DataAbstraction.Internal.DefaultPropertyDefinitionRepository
+8.) Instance of EPiServer.DataAbstraction.IPropertyDefinitionRepository (EPiServer.DataAbstraction.Internal.DefaultPropertyDefinitionRepository)
+9.) new ContentTypeDB(*Default of ServiceAccessor<IDatabaseExecutor>*, *Default of IPropertyDefinitionRepository*, *Default of IPropertySettingsRepository*, *Default of ContentTypeModelRepository*, *Default of DatabaseDateTimeHandler*, *Default of ISynchronizedObjectInstanceCache*, *Default of IPrincipalAccessor*)
+10.) EPiServer.DataAccess.Internal.ContentTypeDB
+11.) Instance of EPiServer.DataAccess.Internal.ContentTypeDB
+12.) new DefaultContentTypeRepository(*Default of ContentTypeModelRepository*, *Default of ContentTypeDB*, *Default of ModelMerger*, *Default of ITabDefinitionRepository*, *Default of IPropertyDefinitionTypeRepository*, *Default of ITypeReferenceAnalyzer*, *Default of IPropertyDefinitionRepository*, *Default of ISynchronizedObjectInstanceCache*)
+13.) EPiServer.DataAbstraction.Internal.DefaultContentTypeRepository
+14.) Instance of EPiServer.DataAbstraction.IContentTypeRepository (EPiServer.DataAbstraction.Internal.DefaultContentTypeRepository)
+15.) new ContentDataBuilder(*Default of IPropertyDataFactory*, *Default of IContentTypeRepository*, *Default of IContentDataFactory<BlockData>*, *Default of ILanguageBranchRepository*, *Default of IPageDataMetadataBuilder*, *Default of IContentLanguageAccessor*, *Default of IPrincipalAccessor*)
+16.) EPiServer.Construction.Internal.ContentDataBuilder
+17.) Instance of EPiServer.Construction.IContentDataBuilder (EPiServer.Construction.Internal.ContentDataBuilder)
+18.) new SharedBlockFactory(*Default of IContentDataBuilder*, *Default of ConstructorParameterResolver*, *Default of ServiceAccessor<ContentDataInterceptor>*)
+19.) EPiServer.Construction.Internal.SharedBlockFactory
+20.) Instance of EPiServer.Construction.ISharedBlockFactory (EPiServer.Construction.Internal.SharedBlockFactory)
+21.) new ContentFactory(*Default of ISharedBlockFactory*, *Default of IContentDataFactory<IContent>*, *Default of IContentDataFactory<PageData>*, *Default of IContentDataBuilder*, *Default of IPropertyDataFactory*)
+22.) EPiServer.Construction.Internal.ContentFactory
+23.) Instance of EPiServer.Construction.Internal.ContentFactory
+24.) Container.GetInstance(EPiServer.Construction.Internal.ContentFactory)
+ ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> EPiServer.ServiceLocation.ActivationException: Activation error occurred while trying to get instance of type DefaultContentModelUsageService, key "" ---> StructureMap.Building.StructureMapBuildException: Failure while building 'Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentProviderManager,EPiServer.Core.IContentProviderManager]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentProviderManager])._serviceLocator)', check the inner exception for details
+1.) Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentProviderManager,EPiServer.Core.IContentProviderManager]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentProviderManager])._serviceLocator)
+2.) Instance of EPiServer.Core.IContentProviderManager
+3.) new DefaultContentModelUsageService(*Default of IContentProviderManager*)
+4.) EPiServer.Core.Internal.DefaultContentModelUsageService
+5.) Instance of EPiServer.Core.Internal.DefaultContentModelUsageService
+6.) Container.GetInstance(EPiServer.Core.Internal.DefaultContentModelUsageService)
+ ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> EPiServer.ServiceLocation.ActivationException: Activation error occurred while trying to get instance of type DefaultContentProviderManager, key "" ---> StructureMap.Building.StructureMapBuildException: Failure while building 'Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentLanguageAccessor,EPiServer.Core.IContentLanguageAccessor]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentLanguageAccessor])._serviceLocator)', check the inner exception for details
+1.) Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Core.IContentLanguageAccessor,EPiServer.Core.IContentLanguageAccessor]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Core.IContentLanguageAccessor])._serviceLocator)
+2.) Instance of EPiServer.Core.IContentLanguageAccessor
+3.) new DefaultContentProviderManager(*Default of IContentLanguageAccessor*)
+4.) EPiServer.Core.Internal.DefaultContentProviderManager
+5.) Instance of EPiServer.Core.Internal.DefaultContentProviderManager
+6.) Container.GetInstance(EPiServer.Core.Internal.DefaultContentProviderManager)
+ ---> EPiServer.ServiceLocation.ActivationException: Activation error occurred while trying to get instance of type ContentLanguageImplementation, key "" ---> StructureMap.Building.StructureMapBuildException: Failure while building 'Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Framework.Localization.LocalizationService,EPiServer.Framework.Localization.LocalizationService]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Framework.Localization.LocalizationService])._serviceLocator)', check the inner exception for details
+1.) Lambda: Invoke(value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1+<>c__DisplayClass11_0`1[EPiServer.Framework.Localization.LocalizationService,EPiServer.Framework.Localization.LocalizationService]).instanceAccessor, value(EPiServer.ServiceLocation.Internal.StructureMapConfiguredType`1[EPiServer.Framework.Localization.LocalizationService])._serviceLocator)
+2.) Instance of EPiServer.Framework.Localization.LocalizationService
+3.) new LanguageBranchRepository(*Default of LanguageBranchDB*, *Default of LocalizationService*, *Default of ISynchronizedObjectInstanceCache*)
+4.) EPiServer.DataAbstraction.Internal.LanguageBranchRepository
+5.) Instance of EPiServer.DataAbstraction.ILanguageBranchRepository (EPiServer.DataAbstraction.Internal.LanguageBranchRepository)
+6.) new ContentLanguageImplementation(*Default of ILanguageBranchRepository*, *Default of HostLanguageResolver*, *Default of ServiceAccessor<HttpRequestBase>*, *Default of ContextCache*)
+7.) EPiServer.Globalization.Internal.ContentLanguageImplementation
+8.) Instance of EPiServer.Globalization.Internal.ContentLanguageImplementation
+9.) Container.GetInstance(EPiServer.Globalization.Internal.ContentLanguageImplementation)
+ ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Configuration.ConfigurationErrorsException: Specified directory for FileSystemWatcher with path 'C:\Users\Stella\Desktop\OnboardingProgram\EpiserverProjects\Training\AlloyTraining\Resources\LanguageFiles' does not exist
+   at EPiServer.Framework.Internal.ProviderActivatorUtilities.TryInvokeInitialize(IEnumerable`1 initializeMethods, Object provider, Boolean captureExceptions, Object[] suggestedParameters)
+   at EPiServer.Framework.Internal.ProviderActivatorUtilities.CreateProvider[TProviderContract](IServiceLocator serviceLocator, String name, Type providerType, Object options, Boolean captureInitializeExceptions)
+   at EPiServer.Framework.Localization.ProviderBasedLocalizationService.Create(ResourceKeyHandler keyHandler, LocalizationOptions localizationOptions, IServiceLocator serviceLocator)
+   at EPiServer.Framework.Localization.ProviderBasedLocalizationService.CreateLocalizationService(ResourceKeyHandler keyHandler, LocalizationOptions localizationOptions, IServiceLocator serviceLocator)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at EPiServer.ServiceLocation.Internal.ReflectiveServiceConfigurationHelper.<>c__DisplayClass0_0.<TryRegisterServiceFactoryMember>b__2(IServiceLocator c)
+   at EPiServer.ServiceLocation.Internal.StructureMapConfiguration.TypedFactory`1.<Create>b__2_0(IServiceLocator s)
+   at lambda_method(Closure , IBuildSession , IContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , IBuildSession , IContext )
+   at StructureMap.Building.BuildPlan.Build(IBuildSession session, IContext context)
+   at StructureMap.BuildSession.BuildNewInSession(Type pluginType, Instance instance)
+   at StructureMap.BuildSession.BuildNewInOriginalContext(Type pluginType, Instance instance)
+   at StructureMap.Pipeline.LifecycleObjectCache.buildWithSession(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.Pipeline.LifecycleObjectCache.<>c__DisplayClass5_0.<Get>b__0(Int32 _)
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.<>c__DisplayClass1_1`2.<GetOrAdd>b__1()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.CreateValue()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.get_Value()
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.GetOrAdd[TKey,TValue](ConcurrentDictionary`2 cache, TKey key, Func`2 valueFactory)
+   at StructureMap.Pipeline.LifecycleObjectCache.Get(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.BuildSession.ResolveFromLifecycle(Type pluginType, Instance instance)
+   at StructureMap.SessionCache.GetObject(Type pluginType, Instance instance, ILifecycle lifecycle)
+   at StructureMap.SessionCache.GetDefault(Type pluginType, IPipelineGraph pipelineGraph)
+   at StructureMap.Container.GetInstance(Type pluginType)
+   at EPiServer.ServiceLocation.StructureMapServiceLocator.DoGetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   --- End of inner exception stack trace ---
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance[TService]()
+   at EPiServer.ServiceLocation.ServiceConfigurationProviderExtensions.<>c__34`2.<Forward>b__34_0(IServiceLocator s)
+   at EPiServer.ServiceLocation.Internal.StructureMapConfiguration.TypedFactory`1.<Create>b__2_0(IServiceLocator s)
+   at lambda_method(Closure , IBuildSession , IContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , IBuildSession , IContext )
+   at StructureMap.Building.BuildPlan.Build(IBuildSession session, IContext context)
+   at StructureMap.BuildSession.BuildNewInSession(Type pluginType, Instance instance)
+   at StructureMap.BuildSession.BuildNewInOriginalContext(Type pluginType, Instance instance)
+   at StructureMap.Pipeline.LifecycleObjectCache.buildWithSession(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.Pipeline.LifecycleObjectCache.<>c__DisplayClass5_0.<Get>b__0(Int32 _)
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.<>c__DisplayClass1_1`2.<GetOrAdd>b__1()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.CreateValue()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.get_Value()
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.GetOrAdd[TKey,TValue](ConcurrentDictionary`2 cache, TKey key, Func`2 valueFactory)
+   at StructureMap.Pipeline.LifecycleObjectCache.Get(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.BuildSession.ResolveFromLifecycle(Type pluginType, Instance instance)
+   at StructureMap.SessionCache.GetObject(Type pluginType, Instance instance, ILifecycle lifecycle)
+   at StructureMap.SessionCache.GetDefault(Type pluginType, IPipelineGraph pipelineGraph)
+   at StructureMap.Container.GetInstance(Type pluginType)
+   at EPiServer.ServiceLocation.StructureMapServiceLocator.DoGetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   --- End of inner exception stack trace ---
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance[TService]()
+   at EPiServer.Core.Internal.DefaultContentProviderManager.get_Instance()
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at EPiServer.ServiceLocation.Internal.ReflectiveServiceConfigurationHelper.<>c__DisplayClass0_1.<TryRegisterServiceFactoryMember>b__3(IServiceLocator c)
+   at EPiServer.ServiceLocation.Internal.StructureMapConfiguration.TypedFactory`1.<Create>b__2_0(IServiceLocator s)
+   at lambda_method(Closure , IBuildSession , IContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , IBuildSession , IContext )
+   at StructureMap.Building.BuildPlan.Build(IBuildSession session, IContext context)
+   at StructureMap.BuildSession.BuildNewInSession(Type pluginType, Instance instance)
+   at StructureMap.BuildSession.BuildNewInOriginalContext(Type pluginType, Instance instance)
+   at StructureMap.Pipeline.LifecycleObjectCache.buildWithSession(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.Pipeline.LifecycleObjectCache.<>c__DisplayClass5_0.<Get>b__0(Int32 _)
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.<>c__DisplayClass1_1`2.<GetOrAdd>b__1()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.CreateValue()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.get_Value()
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.GetOrAdd[TKey,TValue](ConcurrentDictionary`2 cache, TKey key, Func`2 valueFactory)
+   at StructureMap.Pipeline.LifecycleObjectCache.Get(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.BuildSession.ResolveFromLifecycle(Type pluginType, Instance instance)
+   at StructureMap.SessionCache.GetObject(Type pluginType, Instance instance, ILifecycle lifecycle)
+   at StructureMap.SessionCache.GetDefault(Type pluginType, IPipelineGraph pipelineGraph)
+   at StructureMap.Container.GetInstance(Type pluginType)
+   at EPiServer.ServiceLocation.StructureMapServiceLocator.DoGetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   --- End of inner exception stack trace ---
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance[TService]()
+   at EPiServer.Core.Internal.DefaultContentModelUsageService.get_Instance()
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at EPiServer.ServiceLocation.Internal.ReflectiveServiceConfigurationHelper.<>c__DisplayClass0_1.<TryRegisterServiceFactoryMember>b__3(IServiceLocator c)
+   at EPiServer.ServiceLocation.Internal.StructureMapConfiguration.TypedFactory`1.<Create>b__2_0(IServiceLocator s)
+   at lambda_method(Closure , IBuildSession , IContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , IBuildSession , IContext )
+   at StructureMap.Building.BuildPlan.Build(IBuildSession session, IContext context)
+   at StructureMap.BuildSession.BuildNewInSession(Type pluginType, Instance instance)
+   at StructureMap.BuildSession.BuildNewInOriginalContext(Type pluginType, Instance instance)
+   at StructureMap.Pipeline.LifecycleObjectCache.buildWithSession(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.Pipeline.LifecycleObjectCache.<>c__DisplayClass5_0.<Get>b__0(Int32 _)
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.<>c__DisplayClass1_1`2.<GetOrAdd>b__1()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.CreateValue()
+   at StructureMap.Pipeline.LazyLifecycleObject`1.get_Value()
+   at StructureMap.Pipeline.LazyLifecycleObjectCacheExtensions.GetOrAdd[TKey,TValue](ConcurrentDictionary`2 cache, TKey key, Func`2 valueFactory)
+   at StructureMap.Pipeline.LifecycleObjectCache.Get(Type pluginType, Instance instance, IBuildSession session)
+   at StructureMap.BuildSession.ResolveFromLifecycle(Type pluginType, Instance instance)
+   at StructureMap.SessionCache.GetObject(Type pluginType, Instance instance, ILifecycle lifecycle)
+   at StructureMap.SessionCache.GetDefault(Type pluginType, IPipelineGraph pipelineGraph)
+   at StructureMap.Container.GetInstance(Type pluginType)
+   at EPiServer.ServiceLocation.StructureMapServiceLocator.DoGetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   --- End of inner exception stack trace ---
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   at EPiServer.ServiceLocation.ServiceLocatorImplBase.GetInstance[TService]()
+   at EPiServer.Initialization.Internal.ContentFactoryInitialization.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.<>c__DisplayClass2_0.<Initialize>b__0()
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Execute(Action a, String key)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()
